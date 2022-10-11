@@ -22,6 +22,7 @@ const ViewContact = () => {
                 const {data: contactData} = await getContact(contactId);
                 const {data: groupData} = await getGroup(contactData.group);
 
+
                 setLoading(false);
                 setState({
                     ...state,

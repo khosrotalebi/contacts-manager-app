@@ -1,17 +1,17 @@
-import {CURRENTLINE, CYAN, ORANGE, PURPLE, RED} from "../../helpers/colors";
-import {Link} from "react-router-dom";
+import { CURRENTLINE, CYAN, ORANGE, PURPLE, RED } from "../../helpers/colors";
+import { Link } from "react-router-dom";
 
-const Contact = ({contact, deleteContact}) => {
+const Contact = ({ contact, deleteContact }) => {
     return (
         <div className="col-md-6">
-            <div style={{backgroundColor: CURRENTLINE}} className="card my-2">
+            <div style={{ backgroundColor: CURRENTLINE }} className="card my-2">
                 <div className="card-body">
                     <div className="row align-items-center d-flex justify-content-around">
                         <div className="col-md-4 col-sm-4">
                             <img
                                 src={contact.photo}
                                 alt={contact.fullName}
-                                style={{border: `2px solid ${PURPLE}`}}
+                                style={{ border: `2px solid ${PURPLE}` }}
                                 className="img-fluid rounded"
                             />
                         </div>
@@ -20,22 +20,22 @@ const Contact = ({contact, deleteContact}) => {
                                 <li className="list-group-item list-group-item-dark">
                                     نام و نام خانوداگی :{"  "}
                                     <span className="fw-bold">
-                    {contact.fullname}
-                  </span>
+                                        {contact.fullname}
+                                    </span>
                                 </li>
 
                                 <li className="list-group-item list-group-item-dark">
                                     شماره موبایل :{"  "}
                                     <span className="fw-bold">
-                    {contact.mobile}
-                  </span>
+                                        {contact.mobile}
+                                    </span>
                                 </li>
 
                                 <li className="list-group-item list-group-item-dark">
                                     آدرس ایمیل :{"  "}
                                     <span className="fw-bold">
-                    {contact.email}
-                  </span>
+                                        {contact.email}
+                                    </span>
                                 </li>
                             </ul>
                         </div>
@@ -43,24 +43,24 @@ const Contact = ({contact, deleteContact}) => {
                             <Link
                                 to={`/contacts/${contact.id}`}
                                 className="btn my-1"
-                                style={{backgroundColor: ORANGE}}
+                                style={{ backgroundColor: ORANGE }}
                             >
-                                <i className="fa fa-eye"/>
+                                <i className="fa fa-eye" />
                             </Link>
 
                             <Link
                                 to={`/contacts/edit/${contact.id}`}
                                 className="btn my-1"
-                                style={{backgroundColor: CYAN}}
+                                style={{ backgroundColor: CYAN }}
                             >
-                                <i className="fa fa-pen"/>
+                                <i className="fa fa-pen" />
                             </Link>
                             <button
                                 onClick={deleteContact}
                                 className="btn my-1"
-                                style={{backgroundColor: RED}}
+                                style={{ backgroundColor: RED }}
                             >
-                                <i className="fa fa-trash"/>
+                                <i className="fa fa-trash" />
                             </button>
                         </div>
                     </div>

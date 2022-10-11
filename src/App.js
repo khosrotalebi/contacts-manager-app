@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
+import {Navigate, Route, Routes,useNavigate} from "react-router-dom";
 import { confirmAlert } from "react-confirm-alert";
 import { useImmer } from "use-immer";
 import {ToastContainer,toast} from "react-toastify";
@@ -56,7 +56,6 @@ const App = () => {
                 setLoading(false);
             }
         };
-
         fetchData();
     }, []);
 
@@ -65,7 +64,7 @@ const App = () => {
             setLoading((draft) => !draft);
 
             const { status, data } = await createContact(values);
-            console.log(data);
+
             if (status === 201) {
                 toast.success("مخاطب با موفقیت ساخته شد", { icon: "🚀" });
                 setContacts((draft) => {
